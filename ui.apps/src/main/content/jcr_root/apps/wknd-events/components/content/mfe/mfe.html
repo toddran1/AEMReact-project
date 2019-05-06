@@ -1,0 +1,17 @@
+<!-- <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+<sly data-sly-call="${clientlib.css @ categories='formExample.components'}" />
+<sly data-sly-call="${clientlib.js @ categories='formExample.components'}" /> -->
+
+<div data-sly-use.mfe="com.adobe.aem.guides.wkndevents.core.models.FormExample"
+        class="f-cont" style="background-color: black; color: white; width: 25%; border-radius: 5px; padding: 10px; margin: 15px;">
+    <form>
+        Username:<br>
+        <input style="width: 99%;" type="text" name="Uname" value="${mfe.text1 @ context='html'}">
+        <br>
+        Password:<br>
+        <input style="width: 99%;" type="text" name="Pword" value="${mfe.text2 @ context='html'}">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form> 
+</div>
+

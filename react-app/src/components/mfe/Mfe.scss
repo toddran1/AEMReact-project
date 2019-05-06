@@ -1,0 +1,15 @@
+@import '../../styles/shared';
+
+.MFE {
+  @include component-padding();
+}
+
+.MfeColor {
+    background-color: black; 
+    color: white; 
+    width: 25%; 
+    border-radius: 5px; 
+    padding: 10px; 
+    margin: 15px;
+}
+   

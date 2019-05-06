@@ -1,0 +1,57 @@
+{  
+   "title":"Test Page",
+   ":itemsOrder":[  
+      "root"
+   ],
+   ":hierarchyType":"page",
+   ":path":"/content/wknd-events/testPageReact",
+   ":type":"wknd-events/components/structure/page",
+   ":items":{  
+      "root":{  
+         "columnCount":12,
+         "columnClassNames":{  
+            "responsivegrid":"aem-GridColumn aem-GridColumn--default--12"
+         },
+         "gridClassNames":"aem-Grid aem-Grid--12 aem-Grid--default--12",
+         ":itemsOrder":[  
+            "responsivegrid"
+         ],
+         ":items":{  
+            "responsivegrid":{  
+               "columnCount":12,
+               "columnClassNames":{  
+                  "formexample":"aem-GridColumn aem-GridColumn--default--12",
+                  "text":"aem-GridColumn aem-GridColumn--default--12",
+                  "text_1617417463":"aem-GridColumn aem-GridColumn--default--12"
+               },
+               "gridClassNames":"aem-Grid aem-Grid--12 aem-Grid--default--12",
+               ":itemsOrder":[  
+                  "text",
+                  "text_1617417463",
+                  "formexample"
+               ],
+               ":items":{  
+                  "text":{  
+                     "text":"\u003Cp\u003Ehello hello hello\u003C/p\u003E\n",
+                     "richText":true,
+                     ":type":"wknd-events/components/content/text"
+                  },
+                  "text_1617417463":{  
+                     "text":"\u003Cp\u003E2nd text\u003C/p\u003E\n",
+                     "richText":true,
+                     ":type":"wknd-events/components/content/text"
+                  },
+                  "formexample":{  
+                     "text1":"Username:",
+                     "text2":"Password:",
+                     "message":"This Is Reggies message!",
+                     ":type":"wknd-events/components/content/formExample"
+                  }
+               },
+               ":type":"wcm/foundation/components/responsivegrid"
+            }
+         },
+         ":type":"wcm/foundation/components/responsivegrid"
+      }
+   }
+}

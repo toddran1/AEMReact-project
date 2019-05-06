@@ -1,0 +1,64 @@
+package com.adobe.aem.guides.wkndevents.core.models.impl;
+
+import java.util.Collections;
+import java.util.List;
+
+import javax.annotation.PostConstruct;
+
+import org.apache.commons.lang3.StringUtils;
+import org.apache.sling.api.SlingHttpServletRequest;
+import org.apache.sling.models.annotations.DefaultInjectionStrategy;
+import org.apache.sling.models.annotations.Model;
+import org.apache.sling.models.annotations.injectorspecific.OSGiService;
+import org.apache.sling.models.annotations.injectorspecific.Self;
+import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
+import org.apache.sling.models.factory.ModelFactory;
+
+import com.adobe.aem.guides.wkndevents.core.models.FormExample;
+import com.adobe.cq.wcm.core.components.models.Image;
+import com.drew.lang.annotations.Nullable;
+
+@Model(
+        adaptables = {SlingHttpServletRequest.class},
+        adapters = {FormExample.class},
+        resourceType = { FormExampleImpl.RESOURCE_TYPE }, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
+
+public class FormExampleImpl implements FormExample {
+    protected static final String RESOURCE_TYPE = "wknd-events/components/content/formExample";
+
+    @Self
+    private SlingHttpServletRequest request;
+    
+    @OSGiService
+    private ModelFactory modelFactory;
+    
+    @ValueMapValue
+    private String text1 = "Username:";
+   
+    @ValueMapValue
+    private String text2 = "Password:";
+    
+    @Override
+    public String getText1() {
+        return text1;
+    }//getText1
+
+    @Override
+    public String getText2() {
+        return text2;
+    }//getText2
+
+    @Override
+    public boolean isEmpty() {
+        if (StringUtils.isBlank(text1)) {
+            // text1 is missing, but required
+            return true;
+        } else if (StringUtils.isBlank(text2)) {
+            // text2 is missing, but required
+            return true;
+        } else {
+            // Everything is populated, so this component is not considered empty
+            return false;
+        }//if-else
+    }//boolen
+}//formExample
